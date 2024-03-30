@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% block body %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+{% comment %} <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> {% endcomment %}
+<style>
+  .container{
+    background-color:#CADBE7; 
+    width:100%;
+  }  
+  .carousel-slide{
+    background-color:#CADBE7; 
+  }
+  .footer{
+    font-face:Arial;
+    padding-left:10px;
+    padding-right:10px;
+    align-items:centre;
+  }
+  .row{
+    padding-left:10px;
+    padding-right:10px;
+    align-items:centre;
+
+  }
+  .col-md-4{
+    padding-left:10px;
+    padding-right:10px;
+    align-items:centre;
+    {% comment %} background-color:#CADBE7; {% endcomment %}
+  }
+  .col-md-6{
+    padding-left:10px;
+    padding-right:10px;
+    align-items:centre;
+    {% comment %} background-color:#CADBE7; {% endcomment %}
+  }
+  .container1{
+    font-color:white;
+    background-color:white;
+    align-items:centre;
+    padding-left:10px;
+    padding-right:10px;
+    }  
+</style>
+{% comment %} <i class="fa-regular fa-user"></i> {% endcomment %}
+
+<div id="carouselExampleCaptions" class="carousel slide" style="max-width: 990px; margin: 1rem auto;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner my-3">
+    <div class="carousel-item active">
+      <img src="https://wallpapercave.com/wp/wp2789220.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5><font Our Doctors, Our Pride!></h5>
+        <p>Serving The Nation Is Our Duty.</p>
+      </div>
+    </div>
+    <div class="carousel-item my-3">
+      <img src="https://theeducationpost.in/wp-content/uploads/2023/09/Delving-into-Doctor-Patient-Ratio.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Paiteint Is Priority</h5>
+        <p>We Believe I, Service to Mankind.</p>
+      </div>
+    </div>
+    <div class="carousel-item my-3">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/the-good-doctor-operating-room-1588791591.jpg?crop=1xw:0.84375xh;center,top" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Trust Worthy</h5>
+        <p>You Can Trust Us, We Are Here To Serve You.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+<!-- MIDDLE CONTENT OF WEBSITE -->
+<div class="container  mt-auto py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- User Login Form -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Our Achievements!</h5>
+         <pr>
+          
+"Revolutionize healthcare with our online hospital management system. 
+Seamlessly manage appointments, patient records, and prescriptions. 
+Enhance efficiency and patient care with our intuitive platform."
+         </pr>
+           {% comment %} <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+             <button type="submit" class="btn btn-primary">Login</button> 
+          </form> {% endcomment %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      
+      <!-- Details about Online Checkup -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Online Checkup</h5>
+          <p class="card-text">Welcome to our online checkup service. Our platform allows you to consult with a doctor remotely from the comfort of your home.</p>
+          <p>Features:</p>
+          <ul>
+            <li>Convenient online consultations</li>
+            <li>Secure and private communication</li>
+            <li>Prescription delivery to your doorstep</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} <form action="{% url 'index' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Submit"> {% endcomment %}
+</form>
+
+
+<!--FOOTER CODE IS HER-->
+<footer class="footer">
+  <div class="container1 mt-auto py-5">
+    <div class="row">
+      <div class="col-md-4">
+        
+        <h5>About Us</h5>
+        <p> Leader in digital health publishing<br> VAIDYA Maintain Reliablility<br> Source of Health Information.<br>Trusted Health Information Platform </p>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact Us</h5>
+        <p>Government Polytechnic, Sadar<br>Mangalwaari Bazaar, Nagpur<br>Phone: (721) 862-0735<br>Email: vaidyalavanya634@gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/doctor">Find Doctors</a></li>
+          <li><a href="/service">Services</a></li>
+          {% comment %} <li><a href="/contact">Contact</a></li> {% endcomment %}
+          <li><a href="/medicine">Medicine</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    {% comment %} <div class="row">
+      <div class="col-md-6">
+        <h5>Opening Hours</h5>
+        <ul class="list-unstyled">
+          <li>Time For Clinic Visit-</li>
+          <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+          <li>Saturday: 9:00 AM - 2:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Follow Us</h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><i class="fab fa-search"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div> {% endcomment %}
+  <div class="container-fluid bg-dark text-white text-center py-3">
+    <div class="row">
+      <div class="col">
+        <p class="mb-0">© 2024  The VAIDYA Website Pvt.Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% endblock %}
