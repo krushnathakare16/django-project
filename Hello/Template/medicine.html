@@ -1,0 +1,102 @@
+
+{% extends 'base.html' %}
+{% comment %} {% block title%}Medicine{% endblock title%} {% endcomment %}
+{% block body %}
+<head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #CADBE7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .search-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 70%;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .medicine-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .medicine-list li {
+      background-color: #f1f1f1;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+    .medicine-list li:hover {
+      background-color: #e2e2e2;
+    }
+  </style>
+  </head>
+  <body>
+  
+  <div class="container">
+    <h1>Medicine Search</h1>
+    <div class="search-container">
+      <input type="text" id="medicine-input" placeholder="Enter medicine name...">
+      <button onclick="searchMedicine()"><i class="fas fa-search"></i> Search</button>
+    </div>
+    <ul class="medicine-list" id="medicine-list">
+      <li><strong>Panadol</strong> - Used to relieve mild to moderate pain and to reduce fever or inflammation.</li>
+      <li><strong>Amoxicillin</strong> - Antibiotic used to treat a wide variety of bacterial infections.</li>
+      <li><strong>Atorvastatin</strong> - Medication used to treat high cholesterol and to lower the risk of stroke, heart attack, or other heart complications.</li>
+      <li><strong>Paracetamol</strong> - Used to treat many conditions such as headache, muscle aches, arthritis, backache, toothaches, colds, and fevers.</li>
+      <li><strong>Ibuprofen</strong> - Nonsteroidal anti-inflammatory drug (NSAID) used to treat fever and mild to moderate pain.</li>
+    </ul>
+  </div>
+  
+  <script>
+  function searchMedicine() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('medicine-input');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("medicine-list");
+    li = ul.getElementsByTagName('li');
+    for (i = 0; i < li.length; i++) {
+      a = li[i];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+  
+  </body>
+{% endblock %}
+

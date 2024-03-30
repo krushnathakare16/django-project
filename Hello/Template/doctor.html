@@ -1,0 +1,128 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #CADBE7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .search-form {
+      background-color: #fff;
+      padding: 0%;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .search-form select, .search-form button {
+      margin-top: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .search-form select {
+      width: 10%;
+    }
+    .search-form button {
+      width: 50%;
+      background-color: green;
+      color: #fff;
+      cursor: pointer;
+    }
+    .search-results {
+      margin-top: 50px;
+    }
+    .doctor-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+    .doctor-card h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    .doctor-card p {
+      margin-bottom: 5px;
+    }
+  </style>
+  </head>
+  <body>
+  
+  <div class="container">
+    <h2><B><u>OUR SPECIALISTS</u></B></h2>
+    {% comment %} <div class="search-form">
+      <form>
+        <select name="specialization" id="specialization">
+          <option value="">Select Specialization</option>
+          <option value="cardiologist">Cardiologist</option>
+          <option value="dermatologist">Dermatologist</option>
+          <option value="gynecologist">Gynecologist</option>
+          <!-- Add more options for different specializations -->
+        </select>
+        <select name="location" id="location">
+          <option value="">Select Location</option>
+          <option value="new-york">New York</option>
+          <option value="los-angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <!-- Add more options for different locations -->
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </div> {% endcomment %}
+  
+    <div class="search-results">
+      <!-- Display search results dynamically here -->
+      <div class="doctor-card">
+        <h3>Dr. Vaibhav Patel</h3>
+        <p>Specialization: Cardiologist</p>
+        <p>Location: Mumbai</p>
+        <p>Experience: 10 years</p>
+        <p><a href="index.html">Book Appointment</a></p>
+      </div>
+
+      <div class="doctor-card">
+        <h3>Dr. John Doe</h3>
+        <p>Specialization: Neurologist</p>
+        <p>Location: New York</p>
+        <p>Experience: 20 years</p>
+        <p><a href="index.html">Book Appointment</a></p>
+      </div>
+
+      <div class="doctor-card">
+        <h3>Dr. Mia Parkar</h3>
+        <p>Specialization: Gynaecologist</p>
+        <p>Location: California</p>
+        <p>Experience: 12 years</p>
+        <p><a href="index.html">Book Appointment</a></p>
+      </div>
+
+      <div class="doctor-card">
+        <h3>Dr. Kirti Tanna</h3>
+        <p>Specialization: Psychiatric</p>
+        <p>Location: Nagpur</p>
+        <p>Experience: 15 years</p>
+        <p><a href="index.html">Book Appointment</a></p>
+      </div>
+      <!-- Add more doctor cards based on search results -->
+    </div>
+    
+  </div>
+</body>  
+
+
+{% endblock %}
+
